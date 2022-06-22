@@ -4,19 +4,23 @@ import PropTypes from 'prop-types';
 class MissionCard extends React.Component {
   render() {
     const { name, year, country, destination } = this.props;
+    const yearPhrase = `Ano: ${year}`;
+    const countryPhrase = `Pais: ${country}`;
+    const destinationPhrase = `Destino: ${destination}`;
     return (
-      <div data-testid="mission-card">
-        <p data-testid="mission-name">
+      <div data-testid="mission-card" className="missions">
+        <p data-testid="mission-name" className="missionName">
           {name}
         </p>
+        <hr />
         <p data-testid="mission-year">
-          {year}
+          {yearPhrase}
         </p>
         <p data-testid="mission-country">
-          {country}
+          {countryPhrase}
         </p>
         <p data-testid="mission-destination">
-          {destination}
+          {destinationPhrase}
         </p>
       </div>
     );
